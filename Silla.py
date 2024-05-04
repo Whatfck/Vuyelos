@@ -1,4 +1,5 @@
 class Silla:
+    # Enumeraciones
     CLASE = {
         "vip": "Ejecutiva",
         "eco": "Economica"
@@ -10,9 +11,12 @@ class Silla:
         "centro" : "Centro"
     }
 
+    # Atributos
     def __init__(self, pNumero, pClase, pUbicaicon):
-        self.numero = pNumero
-        self.clase = (self.CLASE.vip,self.CLASE.eco)[pClase]
+        self.__numero = pNumero
+
+        self.__clase = (self.CLASE.vip,self.CLASE.eco)[pClase]
+
         if pUbicaicon == "ventana":
             self.__ubicacion = self.UBICACION.ventana
         elif pUbicaicon == "pasillo":
@@ -24,8 +28,12 @@ class Silla:
 
         self.__pasajero = None
 
+    # Métodos
     def asignarPasajero(self,pPasajero):
-        self.__pasajero=pPasajero
+        self.__pasajero = pPasajero
+
+    def eliminarPasajero(self):
+        self.__pasajero = None
     
     def designarSilla(self):
         return True if self.__numero == None else False
@@ -38,6 +46,9 @@ class Silla:
 
     def getUbicacion(self):
         return self.__ubicacion
+    
     def getPasajero(self):
         return self.__pasajero
+    
+
 
