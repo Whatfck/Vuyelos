@@ -16,5 +16,3 @@ class Pasajero:
     
     def setnombre(self,pNombre):
         self.Nombre = pNombre
-
-    
